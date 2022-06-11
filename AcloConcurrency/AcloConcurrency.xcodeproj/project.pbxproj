@@ -14,6 +14,8 @@
 		2DDDA59D285513EE006E93BF /* AcloConcurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA59C285513EE006E93BF /* AcloConcurrencyTests.swift */; };
 		2DDDA5A7285513EE006E93BF /* AcloConcurrencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA5A6285513EE006E93BF /* AcloConcurrencyUITests.swift */; };
 		2DDDA5A9285513EE006E93BF /* AcloConcurrencyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA5A8285513EE006E93BF /* AcloConcurrencyUITestsLaunchTests.swift */; };
+		2DDDA5B7285515B8006E93BF /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA5B6285515B8006E93BF /* ApiEndpoint.swift */; };
+		2DDDA5B9285516B6006E93BF /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA5B8285516B6006E93BF /* HTTPMethods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		2DDDA5A2285513EE006E93BF /* AcloConcurrencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcloConcurrencyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDDA5A6285513EE006E93BF /* AcloConcurrencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcloConcurrencyUITests.swift; sourceTree = "<group>"; };
 		2DDDA5A8285513EE006E93BF /* AcloConcurrencyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcloConcurrencyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2DDDA5B6285515B8006E93BF /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
+		2DDDA5B8285516B6006E93BF /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		2DDDA58A285513EC006E93BF /* AcloConcurrency */ = {
 			isa = PBXGroup;
 			children = (
+				2DDDA5B528551564006E93BF /* Networking */,
 				2DDDA58B285513EC006E93BF /* AcloConcurrencyApp.swift */,
 				2DDDA58D285513EC006E93BF /* ContentView.swift */,
 				2DDDA58F285513EE006E93BF /* Assets.xcassets */,
@@ -125,6 +130,15 @@
 				2DDDA5A8285513EE006E93BF /* AcloConcurrencyUITestsLaunchTests.swift */,
 			);
 			path = AcloConcurrencyUITests;
+			sourceTree = "<group>";
+		};
+		2DDDA5B528551564006E93BF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2DDDA5B6285515B8006E93BF /* ApiEndpoint.swift */,
+				2DDDA5B8285516B6006E93BF /* HTTPMethods.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DDDA5B9285516B6006E93BF /* HTTPMethods.swift in Sources */,
 				2DDDA58E285513EC006E93BF /* ContentView.swift in Sources */,
 				2DDDA58C285513EC006E93BF /* AcloConcurrencyApp.swift in Sources */,
+				2DDDA5B7285515B8006E93BF /* ApiEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
