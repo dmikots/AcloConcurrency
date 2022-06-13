@@ -8,7 +8,9 @@
 import Foundation
 public typealias Parameters = [String: Any]
 public typealias Headers = [String: String]
-
+enum Hello {
+    
+}
 public enum ApiEndpoint {}
 
 extension ApiEndpoint {
