@@ -1,0 +1,11 @@
+*.xcodeproj
+*.xcworkspace
+*.DS_Store
+/Pods
+*/Pods
+*/Podfile.lock
+/Temp
+**/Derived
+*/vendor/bundle
+.idea/
+*/.bundle

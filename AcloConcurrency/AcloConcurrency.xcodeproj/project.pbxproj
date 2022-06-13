@@ -11,9 +11,6 @@
 		2DDDA58E285513EC006E93BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA58D285513EC006E93BF /* ContentView.swift */; };
 		2DDDA590285513EE006E93BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDA58F285513EE006E93BF /* Assets.xcassets */; };
 		2DDDA593285513EE006E93BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDA592285513EE006E93BF /* Preview Assets.xcassets */; };
-		2DDDA59D285513EE006E93BF /* AcloConcurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA59C285513EE006E93BF /* AcloConcurrencyTests.swift */; };
-		2DDDA5A7285513EE006E93BF /* AcloConcurrencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA5A6285513EE006E93BF /* AcloConcurrencyUITests.swift */; };
-		2DDDA5A9285513EE006E93BF /* AcloConcurrencyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA5A8285513EE006E93BF /* AcloConcurrencyUITestsLaunchTests.swift */; };
 		2DDDA5B7285515B8006E93BF /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA5B6285515B8006E93BF /* ApiEndpoint.swift */; };
 		2DDDA5B9285516B6006E93BF /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA5B8285516B6006E93BF /* HTTPMethods.swift */; };
 /* End PBXBuildFile section */
@@ -42,10 +39,7 @@
 		2DDDA58F285513EE006E93BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DDDA592285513EE006E93BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2DDDA598285513EE006E93BF /* AcloConcurrencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcloConcurrencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DDDA59C285513EE006E93BF /* AcloConcurrencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcloConcurrencyTests.swift; sourceTree = "<group>"; };
 		2DDDA5A2285513EE006E93BF /* AcloConcurrencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcloConcurrencyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DDDA5A6285513EE006E93BF /* AcloConcurrencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcloConcurrencyUITests.swift; sourceTree = "<group>"; };
-		2DDDA5A8285513EE006E93BF /* AcloConcurrencyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcloConcurrencyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2DDDA5B6285515B8006E93BF /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		2DDDA5B8285516B6006E93BF /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,8 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				2DDDA58A285513EC006E93BF /* AcloConcurrency */,
-				2DDDA59B285513EE006E93BF /* AcloConcurrencyTests */,
-				2DDDA5A5285513EE006E93BF /* AcloConcurrencyUITests */,
 				2DDDA589285513EC006E93BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,23 +107,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2DDDA59B285513EE006E93BF /* AcloConcurrencyTests */ = {
-			isa = PBXGroup;
-			children = (
-				2DDDA59C285513EE006E93BF /* AcloConcurrencyTests.swift */,
-			);
-			path = AcloConcurrencyTests;
-			sourceTree = "<group>";
-		};
-		2DDDA5A5285513EE006E93BF /* AcloConcurrencyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2DDDA5A6285513EE006E93BF /* AcloConcurrencyUITests.swift */,
-				2DDDA5A8285513EE006E93BF /* AcloConcurrencyUITestsLaunchTests.swift */,
-			);
-			path = AcloConcurrencyUITests;
-			sourceTree = "<group>";
-		};
 		2DDDA5B528551564006E93BF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +123,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DDDA5AC285513EE006E93BF /* Build configuration list for PBXNativeTarget "AcloConcurrency" */;
 			buildPhases = (
+				26DB396F285776C100D0D26A /* SwiftLint */,
 				2DDDA584285513EC006E93BF /* Sources */,
 				2DDDA585285513EC006E93BF /* Frameworks */,
 				2DDDA586285513EC006E93BF /* Resources */,
@@ -266,6 +242,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26DB396F285776C100D0D26A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2DDDA584285513EC006E93BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -282,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DDDA59D285513EE006E93BF /* AcloConcurrencyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,8 +286,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DDDA5A7285513EE006E93BF /* AcloConcurrencyUITests.swift in Sources */,
-				2DDDA5A9285513EE006E93BF /* AcloConcurrencyUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AcloConcurrency/Preview Content\"";
+				DEVELOPMENT_TEAM = TDUD5XR6HG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -461,6 +456,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AcloConcurrency/Preview Content\"";
+				DEVELOPMENT_TEAM = TDUD5XR6HG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

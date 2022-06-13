@@ -9,9 +9,7 @@ import Foundation
 public typealias Parameters = [String: Any]
 public typealias Headers = [String: String]
 
-public enum ApiEndpoint {
-  
-}
+public enum ApiEndpoint {}
 
 extension ApiEndpoint {
     private var scheme: String {
@@ -23,9 +21,7 @@ extension ApiEndpoint {
     }
 
     private var path: String {
-        switch self {
-        
-        }
+        switch self {}
     }
 
     private var headers: Headers {
@@ -35,7 +31,7 @@ extension ApiEndpoint {
     }
 
     private var queryItems: [URLQueryItem]? {
-        var items: [URLQueryItem] = []
+        let items: [URLQueryItem] = []
         return items.isEmpty ? nil : items
     }
 
@@ -45,9 +41,7 @@ extension ApiEndpoint {
     }
 
     private var httpMethod: HTTPMethod {
-        switch self {
-       
-        }
+        switch self {}
     }
 
     private func configureURL() -> URL? {
