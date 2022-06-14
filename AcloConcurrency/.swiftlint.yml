@@ -17,6 +17,7 @@ opt_in_rules:
     - test_case_accessibility
     - vertical_whitespace_closing_braces
     - weak_delegate
+    - file_header
   
 multiline_arguments:
     only_enforce_after_first_closure_on_first_line: true

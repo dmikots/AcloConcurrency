@@ -13,15 +13,15 @@ public class CollectionsViewModel: ObservableObject {
 
     func getPopularCocktails() {
         Task {
-            await didStartFetchingDrinks()
+            await didFetchingDrinks(true)
             let result = await filterService.getCocktailsByIngredient(.vodka)
             switch result {
             case let .success(drinks):
                 await getDrinks(drinks)
-                await didEndFetchingDrinks()
+                await didFetchingDrinks(false)
             case let .failure(error):
                 print("Error ==>", error)
-                await didEndFetchingDrinks()
+                await didFetchingDrinks(false)
             }
         }
     }
@@ -32,12 +32,7 @@ public class CollectionsViewModel: ObservableObject {
     }
 
     @MainActor
-    private func didStartFetchingDrinks() {
-        didFetchingDrinks = true
-    }
-
-    @MainActor
-    private func didEndFetchingDrinks() {
-        didFetchingDrinks = false
+    private func didFetchingDrinks(_ value: Bool) {
+        didFetchingDrinks = value
     }
 }
