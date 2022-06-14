@@ -1,17 +1,20 @@
-//
-//  AcloConcurrencyApp.swift
-//  AcloConcurrency
-//
-//  Created by DariaMikots on 11.06.2022.
-//
-
 import SwiftUI
 
 @main
 struct AcloConcurrencyApp: App {
+
+    @StateObject private var collectionsViewModel: CollectionsViewModel
+
+    init() {
+        let filterService = FilterService()
+        _collectionsViewModel = StateObject(
+            wrappedValue: CollectionsViewModel(filterService: filterService)
+        )
+    }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CollectionsView(viewModel: collectionsViewModel)
         }
     }
 }

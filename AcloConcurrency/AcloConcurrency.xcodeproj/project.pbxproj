@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		2DDDA58C285513EC006E93BF /* AcloConcurrencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA58B285513EC006E93BF /* AcloConcurrencyApp.swift */; };
-		2DDDA58E285513EC006E93BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA58D285513EC006E93BF /* ContentView.swift */; };
 		2DDDA590285513EE006E93BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDA58F285513EE006E93BF /* Assets.xcassets */; };
 		2DDDA593285513EE006E93BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDA592285513EE006E93BF /* Preview Assets.xcassets */; };
-		2DDDA5B7285515B8006E93BF /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA5B6285515B8006E93BF /* ApiEndpoint.swift */; };
+		2DDDA5B7285515B8006E93BF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA5B6285515B8006E93BF /* Endpoint.swift */; };
 		2DDDA5B9285516B6006E93BF /* HTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA5B8285516B6006E93BF /* HTTPMethods.swift */; };
+		D92B9A3C2858F10800430E24 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A3B2858F10800430E24 /* HTTPClient.swift */; };
+		D92B9A3E2858F11100430E24 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A3D2858F11100430E24 /* RequestError.swift */; };
+		D92B9A412858F4CF00430E24 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A402858F4CF00430E24 /* Drink.swift */; };
+		D92B9A452858F52800430E24 /* FilterEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A442858F52800430E24 /* FilterEndpoints.swift */; };
+		D92B9A482858F8D600430E24 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A472858F8D600430E24 /* FilterService.swift */; };
+		D92B9A4D2858FC9800430E24 /* CollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A4C2858FC9800430E24 /* CollectionsView.swift */; };
+		D92B9A4F2858FCAE00430E24 /* CollectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A4E2858FCAE00430E24 /* CollectionsViewModel.swift */; };
+		D967180928590CA1007B1308 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967180828590CA1007B1308 /* LoaderView.swift */; };
+		D967180B28591853007B1308 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967180A28591853007B1308 /* Ingredient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +43,21 @@
 /* Begin PBXFileReference section */
 		2DDDA588285513EC006E93BF /* AcloConcurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcloConcurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDDA58B285513EC006E93BF /* AcloConcurrencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcloConcurrencyApp.swift; sourceTree = "<group>"; };
-		2DDDA58D285513EC006E93BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2DDDA58F285513EE006E93BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DDDA592285513EE006E93BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2DDDA598285513EE006E93BF /* AcloConcurrencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcloConcurrencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDDA5A2285513EE006E93BF /* AcloConcurrencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcloConcurrencyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DDDA5B6285515B8006E93BF /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
+		2DDDA5B6285515B8006E93BF /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		2DDDA5B8285516B6006E93BF /* HTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethods.swift; sourceTree = "<group>"; };
+		D92B9A3B2858F10800430E24 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		D92B9A3D2858F11100430E24 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		D92B9A402858F4CF00430E24 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		D92B9A442858F52800430E24 /* FilterEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEndpoints.swift; sourceTree = "<group>"; };
+		D92B9A472858F8D600430E24 /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
+		D92B9A4C2858FC9800430E24 /* CollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsView.swift; sourceTree = "<group>"; };
+		D92B9A4E2858FCAE00430E24 /* CollectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewModel.swift; sourceTree = "<group>"; };
+		D967180828590CA1007B1308 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		D967180A28591853007B1308 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +106,11 @@
 		2DDDA58A285513EC006E93BF /* AcloConcurrency */ = {
 			isa = PBXGroup;
 			children = (
-				2DDDA5B528551564006E93BF /* Networking */,
 				2DDDA58B285513EC006E93BF /* AcloConcurrencyApp.swift */,
-				2DDDA58D285513EC006E93BF /* ContentView.swift */,
+				D967180728590C98007B1308 /* UI */,
+				D92B9A3F2858F4AC00430E24 /* Models */,
+				2DDDA5B528551564006E93BF /* Networking */,
+				D92B9A492858FC3300430E24 /* Collections */,
 				2DDDA58F285513EE006E93BF /* Assets.xcassets */,
 				2DDDA591285513EE006E93BF /* Preview Content */,
 			);
@@ -110,10 +128,80 @@
 		2DDDA5B528551564006E93BF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				2DDDA5B6285515B8006E93BF /* ApiEndpoint.swift */,
-				2DDDA5B8285516B6006E93BF /* HTTPMethods.swift */,
+				D92B9A462858F8C900430E24 /* Services */,
+				D92B9A422858F50D00430E24 /* Endpoints */,
+				D92B9A432858F51600430E24 /* Base */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		D92B9A3F2858F4AC00430E24 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D92B9A402858F4CF00430E24 /* Drink.swift */,
+				D967180A28591853007B1308 /* Ingredient.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D92B9A422858F50D00430E24 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				D92B9A442858F52800430E24 /* FilterEndpoints.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		D92B9A432858F51600430E24 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2DDDA5B6285515B8006E93BF /* Endpoint.swift */,
+				2DDDA5B8285516B6006E93BF /* HTTPMethods.swift */,
+				D92B9A3B2858F10800430E24 /* HTTPClient.swift */,
+				D92B9A3D2858F11100430E24 /* RequestError.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D92B9A462858F8C900430E24 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D92B9A472858F8D600430E24 /* FilterService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D92B9A492858FC3300430E24 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				D92B9A4B2858FC5B00430E24 /* ViewModel */,
+				D92B9A4A2858FC5500430E24 /* Views */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
+		D92B9A4A2858FC5500430E24 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D92B9A4C2858FC9800430E24 /* CollectionsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D92B9A4B2858FC5B00430E24 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D92B9A4E2858FCAE00430E24 /* CollectionsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D967180728590C98007B1308 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D967180828590CA1007B1308 /* LoaderView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +347,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --fix\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -268,10 +356,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D92B9A482858F8D600430E24 /* FilterService.swift in Sources */,
+				D967180928590CA1007B1308 /* LoaderView.swift in Sources */,
 				2DDDA5B9285516B6006E93BF /* HTTPMethods.swift in Sources */,
-				2DDDA58E285513EC006E93BF /* ContentView.swift in Sources */,
+				D92B9A4D2858FC9800430E24 /* CollectionsView.swift in Sources */,
+				D967180B28591853007B1308 /* Ingredient.swift in Sources */,
+				D92B9A4F2858FCAE00430E24 /* CollectionsViewModel.swift in Sources */,
+				D92B9A3C2858F10800430E24 /* HTTPClient.swift in Sources */,
+				D92B9A412858F4CF00430E24 /* Drink.swift in Sources */,
+				D92B9A3E2858F11100430E24 /* RequestError.swift in Sources */,
 				2DDDA58C285513EC006E93BF /* AcloConcurrencyApp.swift in Sources */,
-				2DDDA5B7285515B8006E93BF /* ApiEndpoint.swift in Sources */,
+				D92B9A452858F52800430E24 /* FilterEndpoints.swift in Sources */,
+				2DDDA5B7285515B8006E93BF /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +531,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,6 +561,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
