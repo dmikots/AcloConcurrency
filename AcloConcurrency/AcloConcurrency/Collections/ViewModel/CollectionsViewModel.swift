@@ -5,16 +5,16 @@ public class CollectionsViewModel: ObservableObject {
     @Published private(set) var didFetchingDrinks = false
     @Published private(set) var drinks: [Drink] = []
 
-    private let listService: ListServiceable
+    private let filterService: FilterServiceable
 
-    public init(listService: ListServiceable) {
-        self.listService = listService
+    public init(filterService: FilterServiceable) {
+        self.filterService = filterService
     }
 
     func getPopularCocktails() {
         Task {
             await didStartFetchingDrinks()
-            let result = await listService.getPopularCocktails()
+            let result = await filterService.getCocktailsByIngredient(.vodka)
             switch result {
             case let .success(drinks):
                 await getDrinks(drinks)

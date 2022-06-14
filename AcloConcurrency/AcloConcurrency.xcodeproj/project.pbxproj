@@ -15,11 +15,12 @@
 		D92B9A3C2858F10800430E24 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A3B2858F10800430E24 /* HTTPClient.swift */; };
 		D92B9A3E2858F11100430E24 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A3D2858F11100430E24 /* RequestError.swift */; };
 		D92B9A412858F4CF00430E24 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A402858F4CF00430E24 /* Drink.swift */; };
-		D92B9A452858F52800430E24 /* ListEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A442858F52800430E24 /* ListEndpoints.swift */; };
-		D92B9A482858F8D600430E24 /* ListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A472858F8D600430E24 /* ListService.swift */; };
+		D92B9A452858F52800430E24 /* FilterEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A442858F52800430E24 /* FilterEndpoints.swift */; };
+		D92B9A482858F8D600430E24 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A472858F8D600430E24 /* FilterService.swift */; };
 		D92B9A4D2858FC9800430E24 /* CollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A4C2858FC9800430E24 /* CollectionsView.swift */; };
 		D92B9A4F2858FCAE00430E24 /* CollectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92B9A4E2858FCAE00430E24 /* CollectionsViewModel.swift */; };
 		D967180928590CA1007B1308 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967180828590CA1007B1308 /* LoaderView.swift */; };
+		D967180B28591853007B1308 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967180A28591853007B1308 /* Ingredient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,11 +52,12 @@
 		D92B9A3B2858F10800430E24 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		D92B9A3D2858F11100430E24 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		D92B9A402858F4CF00430E24 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
-		D92B9A442858F52800430E24 /* ListEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEndpoints.swift; sourceTree = "<group>"; };
-		D92B9A472858F8D600430E24 /* ListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListService.swift; sourceTree = "<group>"; };
+		D92B9A442858F52800430E24 /* FilterEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEndpoints.swift; sourceTree = "<group>"; };
+		D92B9A472858F8D600430E24 /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 		D92B9A4C2858FC9800430E24 /* CollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsView.swift; sourceTree = "<group>"; };
 		D92B9A4E2858FCAE00430E24 /* CollectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsViewModel.swift; sourceTree = "<group>"; };
 		D967180828590CA1007B1308 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		D967180A28591853007B1308 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +106,10 @@
 		2DDDA58A285513EC006E93BF /* AcloConcurrency */ = {
 			isa = PBXGroup;
 			children = (
+				2DDDA58B285513EC006E93BF /* AcloConcurrencyApp.swift */,
 				D967180728590C98007B1308 /* UI */,
 				D92B9A3F2858F4AC00430E24 /* Models */,
 				2DDDA5B528551564006E93BF /* Networking */,
-				2DDDA58B285513EC006E93BF /* AcloConcurrencyApp.swift */,
 				D92B9A492858FC3300430E24 /* Collections */,
 				2DDDA58F285513EE006E93BF /* Assets.xcassets */,
 				2DDDA591285513EE006E93BF /* Preview Content */,
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				D92B9A402858F4CF00430E24 /* Drink.swift */,
+				D967180A28591853007B1308 /* Ingredient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,7 +147,7 @@
 		D92B9A422858F50D00430E24 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
-				D92B9A442858F52800430E24 /* ListEndpoints.swift */,
+				D92B9A442858F52800430E24 /* FilterEndpoints.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -163,7 +166,7 @@
 		D92B9A462858F8C900430E24 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D92B9A472858F8D600430E24 /* ListService.swift */,
+				D92B9A472858F8D600430E24 /* FilterService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -353,16 +356,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D92B9A482858F8D600430E24 /* ListService.swift in Sources */,
+				D92B9A482858F8D600430E24 /* FilterService.swift in Sources */,
 				D967180928590CA1007B1308 /* LoaderView.swift in Sources */,
 				2DDDA5B9285516B6006E93BF /* HTTPMethods.swift in Sources */,
 				D92B9A4D2858FC9800430E24 /* CollectionsView.swift in Sources */,
+				D967180B28591853007B1308 /* Ingredient.swift in Sources */,
 				D92B9A4F2858FCAE00430E24 /* CollectionsViewModel.swift in Sources */,
 				D92B9A3C2858F10800430E24 /* HTTPClient.swift in Sources */,
 				D92B9A412858F4CF00430E24 /* Drink.swift in Sources */,
 				D92B9A3E2858F11100430E24 /* RequestError.swift in Sources */,
 				2DDDA58C285513EC006E93BF /* AcloConcurrencyApp.swift in Sources */,
-				D92B9A452858F52800430E24 /* ListEndpoints.swift in Sources */,
+				D92B9A452858F52800430E24 /* FilterEndpoints.swift in Sources */,
 				2DDDA5B7285515B8006E93BF /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

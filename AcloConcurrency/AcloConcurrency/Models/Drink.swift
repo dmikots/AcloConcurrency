@@ -9,6 +9,6 @@ public struct Drink: Codable, Hashable, Identifiable {
 
     public let id: String
     public let name: String
-    public let category: String
-    public let alcoholic: String
+    public let category: String?
+    public let alcoholic: String?
 }

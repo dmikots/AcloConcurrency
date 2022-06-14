@@ -6,9 +6,9 @@ struct AcloConcurrencyApp: App {
     @StateObject private var collectionsViewModel: CollectionsViewModel
 
     init() {
-        let listService = ListService()
+        let filterService = FilterService()
         _collectionsViewModel = StateObject(
-            wrappedValue: CollectionsViewModel(listService: listService)
+            wrappedValue: CollectionsViewModel(filterService: filterService)
         )
     }
 

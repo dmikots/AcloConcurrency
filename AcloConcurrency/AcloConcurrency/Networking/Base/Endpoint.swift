@@ -9,6 +9,6 @@ protocol Endpoint {
 extension Endpoint {
 
     var baseURL: String {
-        return "https://the-cocktail-db.p.rapidapi.com/"
+        return "https://www.thecocktaildb.com/api/json/v1/1/"
     }
 }
