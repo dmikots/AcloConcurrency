@@ -3,16 +3,17 @@ import SwiftUI
 @main
 struct AlcoConcurrencyApp: App {
 
-    @StateObject private var placeViewModel: PlacesViewModel
+    @StateObject private var placesViewModel: PlacesViewModel
 
     init() {
-        _placeViewModel = StateObject(wrappedValue: PlacesViewModel(userStorage: UserStorage()))
+        let userStorage = UserStorage()
+        _placesViewModel = StateObject(wrappedValue: PlacesViewModel(userStorage: userStorage))
     }
 
     var body: some Scene {
         WindowGroup {
             TabView{
-                PlacesView(placeModel: placeViewModel)
+                PlacesView(placeModel: placesViewModel)
                     .tabItem {
                         Label("My Places", systemImage: "heart.fill")
                     }

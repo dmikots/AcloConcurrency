@@ -1,6 +1,6 @@
 import Foundation
-struct PlaceModel: Identifiable, Codable {
 
+struct PlaceModel: Identifiable, Codable {
     var id = UUID()
     let name: String
     let description: String
