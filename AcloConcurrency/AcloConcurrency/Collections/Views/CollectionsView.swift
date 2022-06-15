@@ -9,17 +9,19 @@ struct CollectionsView: View {
     }
 
     var body: some View {
-        ZStack {
-            List {
-                ForEach(viewModel.drinks) { drink in
-                    Text(drink.name)
+        NavigationView{
+            ZStack {
+                List {
+                    ForEach(viewModel.drinks) { drink in
+                        Text(drink.name)
+                    }
                 }
-            }
 
-            LoaderView(isActive: .constant(viewModel.didFetchingDrinks))
+                LoaderView(isActive: .constant(viewModel.didFetchingDrinks))
+            }
+            .onAppear {
+                viewModel.getPopularCocktails()
+            }
         }
-        .onAppear {
-            viewModel.getPopularCocktails()
-    }
     }
 }
