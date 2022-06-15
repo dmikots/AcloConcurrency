@@ -2,22 +2,18 @@ import SwiftUI
 
 @main
 struct AlcoConcurrencyApp: App {
-    
-    @StateObject private var collectionsViewModel: CollectionsViewModel
-    
+
+    @StateObject private var place: PlacesViewModel
     init() {
-        let filterService = FilterService()
-        _collectionsViewModel = StateObject(
-            wrappedValue: CollectionsViewModel(filterService: filterService)
-        )
+        _place = StateObject(wrappedValue: PlacesViewModel(userStorage: UserStorage()))
     }
-    
+
     var body: some Scene {
         WindowGroup {
             TabView{
-                CollectionsView(viewModel: collectionsViewModel)
+                PlacesView(placeModel: place)
                     .tabItem {
-                        Label("Collections", systemImage: "heart.fill")
+                        Label("My Places", systemImage: "heart.fill")
                     }
                 SharingView()
                     .tabItem {
