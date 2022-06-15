@@ -7,7 +7,9 @@ struct PlacesView: View {
     init(placeModel: PlacesViewModel) {
         self.placeModel = placeModel
     }
+
     @State private var showingSheet = false
+
     var body: some View {
         NavigationView{
             ZStack {

@@ -10,7 +10,7 @@
 		2D3010052859260600FB598C /* SharingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3010042859260600FB598C /* SharingView.swift */; };
 		2D3010072859262200FB598C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3010062859262200FB598C /* SearchView.swift */; };
 		2D30100A285A4BCF00FB598C /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D301009285A4BCF00FB598C /* UserStorage.swift */; };
-		2D30100D285A4CDE00FB598C /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D30100C285A4CDE00FB598C /* Array+Extensions.swift */; };
+		2D30100D285A4CDE00FB598C /* Array+UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D30100C285A4CDE00FB598C /* Array+UserDefaultsExtension.swift */; };
 		2D301012285A4D4A00FB598C /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D301011285A4D4A00FB598C /* PlaceModel.swift */; };
 		2D301014285A520F00FB598C /* MyPlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D301013285A520F00FB598C /* MyPlaceRow.swift */; };
 		2D301016285A5C6A00FB598C /* AddCustomCollectionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D301015285A5C6A00FB598C /* AddCustomCollectionSheet.swift */; };
@@ -51,7 +51,7 @@
 		2D3010042859260600FB598C /* SharingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingView.swift; sourceTree = "<group>"; };
 		2D3010062859262200FB598C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		2D301009285A4BCF00FB598C /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
-		2D30100C285A4CDE00FB598C /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		2D30100C285A4CDE00FB598C /* Array+UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+UserDefaultsExtension.swift"; sourceTree = "<group>"; };
 		2D301011285A4D4A00FB598C /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		2D301013285A520F00FB598C /* MyPlaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceRow.swift; sourceTree = "<group>"; };
 		2D301015285A5C6A00FB598C /* AddCustomCollectionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomCollectionSheet.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		2D30100B285A4CC400FB598C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2D30100C285A4CDE00FB598C /* Array+Extensions.swift */,
+				2D30100C285A4CDE00FB598C /* Array+UserDefaultsExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -408,7 +408,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --fix\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint && swiftlint --fix\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -431,7 +431,7 @@
 				2D3010072859262200FB598C /* SearchView.swift in Sources */,
 				2DDDA58C285513EC006E93BF /* AlcoConcurrencyApp.swift in Sources */,
 				D92B9A452858F52800430E24 /* FilterEndpoints.swift in Sources */,
-				2D30100D285A4CDE00FB598C /* Array+Extensions.swift in Sources */,
+				2D30100D285A4CDE00FB598C /* Array+UserDefaultsExtension.swift in Sources */,
 				2D301016285A5C6A00FB598C /* AddCustomCollectionSheet.swift in Sources */,
 				2DDDA5B7285515B8006E93BF /* Endpoint.swift in Sources */,
 				2D301014285A520F00FB598C /* MyPlaceRow.swift in Sources */,
