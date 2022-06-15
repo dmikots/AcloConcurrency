@@ -1,10 +1,3 @@
-//
-//  SearchView.swift
-//  AlcoConcurrency
-//
-//  Created by DariaMikots on 14.06.2022.
-//
-
 import SwiftUI
 
 struct SearchView: View {
