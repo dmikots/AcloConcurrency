@@ -9,7 +9,7 @@ struct PlacesView: View {
     init(placeModel: PlacesViewModel) {
         self.placeModel = placeModel
     }
-    //
+
     var body: some View {
         NavigationView{
             ZStack {
