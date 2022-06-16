@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct MyPlaceRow: View {
+
     private var place: PlaceModel
 
     init(place: PlaceModel){
