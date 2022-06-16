@@ -2,9 +2,9 @@ import SwiftUI
 
 struct AddCustomCollectionSheet: View {
 
-    @Environment(\.presentationMode) private var presentationMode
-
     private let savePlace: (_ place: PlaceModel) -> Void
+
+    @Environment(\.presentationMode) private var presentationMode
     @State private var name: String = ""
     @State private var description: String = ""
 
@@ -19,7 +19,7 @@ struct AddCustomCollectionSheet: View {
             TextField("description", text: $description)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             Button(action: {
-                savePlace(PlaceModel(name: name, description: description, id: UUID()))
+                savePlace(PlaceModel(name: name, description: description))
                 presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Save")

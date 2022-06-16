@@ -11,4 +11,5 @@ public class UserStorage {
     func getPlaces() -> [PlaceModel] {
         return places
     }
+
 }
