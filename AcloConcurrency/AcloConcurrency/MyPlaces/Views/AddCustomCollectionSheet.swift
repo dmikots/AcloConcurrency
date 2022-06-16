@@ -2,15 +2,16 @@ import SwiftUI
 
 struct AddCustomCollectionSheet: View {
 
-    @ObservedObject private var placeModel: PlacesViewModel
-
-    init(placeModel: PlacesViewModel) {
-        self.placeModel = placeModel
-    }
+    @Environment(\.presentationMode) var presentationMode
 
     @State private var name: String = ""
     @State private var description: String = ""
-    @Environment(\.presentationMode) var presentationMode
+
+    private let savePlace: (_ place: PlaceModel) -> Void
+
+    init(savePlace: @escaping (_ place: PlaceModel) -> Void) {
+        self.savePlace = savePlace
+    }
 
     var body: some View {
         VStack(spacing: 20){
@@ -19,13 +20,7 @@ struct AddCustomCollectionSheet: View {
             TextField("description", text: $description)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             Button(action: {
-                placeModel.savePlace(
-                    PlaceModel(
-                        id: UUID(),
-                        name: name,
-                        description: description
-                    )
-                )
+                savePlace(PlaceModel(id: UUID(), name: name, description: description))
                 presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Save")
@@ -41,6 +36,7 @@ struct AddCustomCollectionSheet: View {
 
 struct AddCustomCollectionSheet_Previews: PreviewProvider {
     static var previews: some View {
-        AddCustomCollectionSheet(placeModel: PlacesViewModel(userStorage: UserStorage()))
+        AddCustomCollectionSheet { _ in
+        }
     }
 }

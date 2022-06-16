@@ -40,7 +40,7 @@ struct PlacesView: View {
         }
         .navigationViewStyle(.stack)
         .sheet(isPresented: $showingSheet) {
-            AddCustomCollectionSheet(placeModel: placeModel)
+            AddCustomCollectionSheet(savePlace: placeModel.savePlace)
         }
     }
 }
