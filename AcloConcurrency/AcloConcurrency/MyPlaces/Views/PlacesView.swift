@@ -4,10 +4,12 @@ struct PlacesView: View {
 
     @ObservedObject private var placeModel: PlacesViewModel
 
+    @State private var showingSheet = false
+
     init(placeModel: PlacesViewModel) {
         self.placeModel = placeModel
     }
-    @State private var showingSheet = false
+
     var body: some View {
         NavigationView{
             ZStack {
@@ -38,7 +40,7 @@ struct PlacesView: View {
         }
         .navigationViewStyle(.stack)
         .sheet(isPresented: $showingSheet) {
-            AddCustomCollectionSheet(placeModel: placeModel)
+            AddCustomCollectionSheet(savePlace: placeModel.savePlace)
         }
     }
 }

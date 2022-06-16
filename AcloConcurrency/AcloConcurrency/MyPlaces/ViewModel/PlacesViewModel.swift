@@ -1,24 +1,22 @@
 import Combine
 
 public class PlacesViewModel: ObservableObject {
-    
+
     @Published private(set) var places: [PlaceModel] = []
-    
+
     private let userStorage: UserStorage
-    
+
     public init(userStorage: UserStorage) {
         self.userStorage = userStorage
     }
-    @MainActor
+
     func getPlaces() {
-        Task{
-            self.places = userStorage.places
-        }
+       places = userStorage.getPlaces()
     }
-    @MainActor func savePlace(_ place: PlaceModel) {
-        Task{
-            userStorage.saveNewPlace(place)
-        }
+
+    func savePlace(_ place: PlaceModel) {
+        userStorage.saveNewPlace(place)
         getPlaces()
     }
+
 }

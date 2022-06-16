@@ -1,11 +1,12 @@
 import Foundation
 
 public protocol FilterServiceable {
+    
     func getCocktailsByIngredient(_ ingredient: Ingredient) async -> Result<[Drink], RequestError>
 }
 
 public struct FilterService: HTTPClient, FilterServiceable {
-
+    
     public func getCocktailsByIngredient(
         _ ingredient: Ingredient
     ) async -> Result<[Drink], RequestError> {

@@ -1,7 +1,13 @@
 import SwiftUI
 
 struct MyPlaceRow: View {
-    var place: PlaceModel
+
+    private var place: PlaceModel
+
+    init(place: PlaceModel){
+        self.place = place
+    }
+
     var body: some View {
         HStack{
             VStack{
