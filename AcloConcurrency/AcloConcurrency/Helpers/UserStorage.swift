@@ -1,5 +1,6 @@
 import SwiftUI
-public class UserStorage: ObservableObject{
+
+public class UserStorage {
 
     @AppStorage("places") private var places: [PlaceModel] = [PlaceModel.mock]
 
