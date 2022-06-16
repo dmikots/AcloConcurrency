@@ -7,6 +7,7 @@ public class UserStorage {
     func saveNewPlace(_ newPlace: PlaceModel) {
         places.append(newPlace)
     }
+
     func getPlaces() -> [PlaceModel] {
         return places
     }
