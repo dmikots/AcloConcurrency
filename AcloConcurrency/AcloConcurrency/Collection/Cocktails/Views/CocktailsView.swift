@@ -12,7 +12,6 @@ struct CocktailsView: View {
     }
 
     var body: some View {
-        NavigationView{
             ScrollView{
                 HStack{
                     LazyVGrid(columns: [GridItem(), GridItem()], spacing: 18) {
@@ -22,7 +21,6 @@ struct CocktailsView: View {
                     }
                 }
             }
-        }
         .navigationViewStyle(.stack)
         .navigationTitle(ingredientName)
         .navigationBarTitleDisplayMode(.inline)

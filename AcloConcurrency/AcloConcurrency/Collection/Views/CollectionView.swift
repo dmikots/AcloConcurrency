@@ -7,6 +7,7 @@ struct CollectionView: View {
     @ObservedObject private var collectionModel: CollectionViewModel
     @State private var activeNavigation = false
     @State private var ingredientName: String = ""
+
     init(collectionModel: CollectionViewModel){
         self.collectionModel = collectionModel
     }

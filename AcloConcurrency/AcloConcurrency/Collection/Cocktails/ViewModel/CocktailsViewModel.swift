@@ -31,7 +31,13 @@ public class CocktailsViewModel: ObservableObject {
     private func getDrinks(_ drinks: [Drink]) {
         self.drinks = drinks
         _ = drinks.map { drink in
-            cocktails.append(CocktailModel(cocktailName: drink.name, cocktailImage: drink.image, idDrink: drink.id))
+        cocktails.append(
+                CocktailModel(
+                    cocktailName: drink.name,
+                    cocktailImage: drink.image,
+                    idDrink: drink.id
+                )
+            )
         }
     }
 
