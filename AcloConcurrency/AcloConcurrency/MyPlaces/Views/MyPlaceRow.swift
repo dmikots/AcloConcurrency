@@ -35,6 +35,7 @@ struct MyPlaceRow: View {
             )
             .padding()
         }
+        .frame(height: 120)
         .background(.white)
         .cornerRadius(8)
         .padding(.horizontal)

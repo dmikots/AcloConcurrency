@@ -1,17 +1,17 @@
 import Foundation
 
 public protocol FilterServiceable {
-    
-    func getCocktailsByIngredient(_ ingredient: Ingredient) async -> Result<[Drink], RequestError>
+
+    func getCocktailsByIngredient(_ ingredient: String) async -> Result<[Drink], RequestError>
 }
 
 public struct FilterService: HTTPClient, FilterServiceable {
-    
+
     public func getCocktailsByIngredient(
-        _ ingredient: Ingredient
+        _ ingredient: String
     ) async -> Result<[Drink], RequestError> {
         await sendRequest(
-            endpoint: FilterEndpoints.ingredient(ingredient),
+            endpoint: FilterEndpoints.ingredient(name: ingredient),
             responseModel: DrinksEntity.self
         ).map(\.drinks)
     }

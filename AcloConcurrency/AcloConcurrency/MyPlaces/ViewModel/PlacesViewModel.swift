@@ -18,5 +18,4 @@ public class PlacesViewModel: ObservableObject {
         userStorage.saveNewPlace(place)
         getPlaces()
     }
-
 }

@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D3010052859260600FB598C /* SharingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3010042859260600FB598C /* SharingView.swift */; };
+		2D3010052859260600FB598C /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3010042859260600FB598C /* CollectionView.swift */; };
 		2D3010072859262200FB598C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3010062859262200FB598C /* SearchView.swift */; };
 		2D30100A285A4BCF00FB598C /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D301009285A4BCF00FB598C /* UserStorage.swift */; };
 		2D30100D285A4CDE00FB598C /* Array+UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D30100C285A4CDE00FB598C /* Array+UserDefaultsExtension.swift */; };
 		2D301012285A4D4A00FB598C /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D301011285A4D4A00FB598C /* PlaceModel.swift */; };
 		2D301014285A520F00FB598C /* MyPlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D301013285A520F00FB598C /* MyPlaceRow.swift */; };
 		2D301016285A5C6A00FB598C /* AddCustomCollectionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D301015285A5C6A00FB598C /* AddCustomCollectionSheet.swift */; };
+		2D963D47285D1FAA00E2583E /* CollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D963D46285D1FAA00E2583E /* CollectionCellView.swift */; };
+		2D963D4A285D239D00E2583E /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D963D49285D239D00E2583E /* CollectionViewModel.swift */; };
+		2D963D4D285D23DB00E2583E /* CollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D963D4C285D23DB00E2583E /* CollectionModel.swift */; };
+		2D963D4F285DFEC800E2583E /* CocktailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D963D4E285DFEC800E2583E /* CocktailModel.swift */; };
+		2D963D54285E029300E2583E /* CocktailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D963D53285E029300E2583E /* CocktailViewCell.swift */; };
+		2D963D56285E05A100E2583E /* CocktailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D963D55285E05A100E2583E /* CocktailsView.swift */; };
+		2D963D58285E0D0200E2583E /* IngredientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D963D57285E0D0200E2583E /* IngredientModel.swift */; };
+		2D963D5B285E522C00E2583E /* CocktailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D963D5A285E522C00E2583E /* CocktailsViewModel.swift */; };
 		2DDDA58C285513EC006E93BF /* AlcoConcurrencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDDA58B285513EC006E93BF /* AlcoConcurrencyApp.swift */; };
 		2DDDA590285513EE006E93BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDA58F285513EE006E93BF /* Assets.xcassets */; };
 		2DDDA593285513EE006E93BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDA592285513EE006E93BF /* Preview Assets.xcassets */; };
@@ -48,13 +56,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D3010042859260600FB598C /* SharingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingView.swift; sourceTree = "<group>"; };
+		2D3010042859260600FB598C /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		2D3010062859262200FB598C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		2D301009285A4BCF00FB598C /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		2D30100C285A4CDE00FB598C /* Array+UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+UserDefaultsExtension.swift"; sourceTree = "<group>"; };
 		2D301011285A4D4A00FB598C /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		2D301013285A520F00FB598C /* MyPlaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceRow.swift; sourceTree = "<group>"; };
 		2D301015285A5C6A00FB598C /* AddCustomCollectionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomCollectionSheet.swift; sourceTree = "<group>"; };
+		2D963D46285D1FAA00E2583E /* CollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellView.swift; sourceTree = "<group>"; };
+		2D963D49285D239D00E2583E /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
+		2D963D4C285D23DB00E2583E /* CollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionModel.swift; sourceTree = "<group>"; };
+		2D963D4E285DFEC800E2583E /* CocktailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailModel.swift; sourceTree = "<group>"; };
+		2D963D53285E029300E2583E /* CocktailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewCell.swift; sourceTree = "<group>"; };
+		2D963D55285E05A100E2583E /* CocktailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsView.swift; sourceTree = "<group>"; };
+		2D963D57285E0D0200E2583E /* IngredientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientModel.swift; sourceTree = "<group>"; };
+		2D963D5A285E522C00E2583E /* CocktailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsViewModel.swift; sourceTree = "<group>"; };
 		2DDDA588285513EC006E93BF /* AlcoConcurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlcoConcurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDDA58B285513EC006E93BF /* AlcoConcurrencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoConcurrencyApp.swift; sourceTree = "<group>"; };
 		2DDDA58F285513EE006E93BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,12 +131,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		2D30100E285A4D1300FB598C /* Sharing */ = {
+		2D30100E285A4D1300FB598C /* Collection */ = {
 			isa = PBXGroup;
 			children = (
-				2D3010042859260600FB598C /* SharingView.swift */,
+				2D963D50285E024200E2583E /* Cocktails */,
+				2D963D4B285D23CD00E2583E /* Models */,
+				2D963D48285D238700E2583E /* ViewModel */,
+				2D963D45285D1F8800E2583E /* Views */,
 			);
-			path = Sharing;
+			path = Collection;
 			sourceTree = "<group>";
 		};
 		2D30100F285A4D2600FB598C /* Search */ = {
@@ -137,6 +156,67 @@
 				2D301011285A4D4A00FB598C /* PlaceModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2D963D45285D1F8800E2583E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2D3010042859260600FB598C /* CollectionView.swift */,
+				2D963D46285D1FAA00E2583E /* CollectionCellView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D963D48285D238700E2583E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2D963D49285D239D00E2583E /* CollectionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2D963D4B285D23CD00E2583E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D963D4C285D23DB00E2583E /* CollectionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D963D50285E024200E2583E /* Cocktails */ = {
+			isa = PBXGroup;
+			children = (
+				2D963D59285E521500E2583E /* ViewModel */,
+				2D963D52285E026500E2583E /* Views */,
+				2D963D51285E025E00E2583E /* Models */,
+			);
+			path = Cocktails;
+			sourceTree = "<group>";
+		};
+		2D963D51285E025E00E2583E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D963D4E285DFEC800E2583E /* CocktailModel.swift */,
+				2D963D57285E0D0200E2583E /* IngredientModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2D963D52285E026500E2583E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2D963D53285E029300E2583E /* CocktailViewCell.swift */,
+				2D963D55285E05A100E2583E /* CocktailsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D963D59285E521500E2583E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2D963D5A285E522C00E2583E /* CocktailsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2DDDA57F285513EC006E93BF = {
@@ -166,7 +246,7 @@
 				D967180728590C98007B1308 /* UI */,
 				D92B9A3F2858F4AC00430E24 /* Models */,
 				2DDDA5B528551564006E93BF /* Networking */,
-				2D30100E285A4D1300FB598C /* Sharing */,
+				2D30100E285A4D1300FB598C /* Collection */,
 				2D30100F285A4D2600FB598C /* Search */,
 				D92B9A492858FC3300430E24 /* MyPlaces */,
 				2DDDA58F285513EE006E93BF /* Assets.xcassets */,
@@ -417,25 +497,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D963D58285E0D0200E2583E /* IngredientModel.swift in Sources */,
 				D92B9A482858F8D600430E24 /* FilterService.swift in Sources */,
 				D967180928590CA1007B1308 /* LoaderView.swift in Sources */,
 				2D301012285A4D4A00FB598C /* PlaceModel.swift in Sources */,
-				2D3010052859260600FB598C /* SharingView.swift in Sources */,
+				2D3010052859260600FB598C /* CollectionView.swift in Sources */,
+				2D963D5B285E522C00E2583E /* CocktailsViewModel.swift in Sources */,
 				2DDDA5B9285516B6006E93BF /* HTTPMethods.swift in Sources */,
 				D92B9A4D2858FC9800430E24 /* PlacesView.swift in Sources */,
+				2D963D54285E029300E2583E /* CocktailViewCell.swift in Sources */,
 				D967180B28591853007B1308 /* Ingredient.swift in Sources */,
+				2D963D4D285D23DB00E2583E /* CollectionModel.swift in Sources */,
 				D92B9A4F2858FCAE00430E24 /* PlacesViewModel.swift in Sources */,
 				D92B9A3C2858F10800430E24 /* HTTPClient.swift in Sources */,
+				2D963D4A285D239D00E2583E /* CollectionViewModel.swift in Sources */,
 				D92B9A412858F4CF00430E24 /* Drink.swift in Sources */,
 				D92B9A3E2858F11100430E24 /* RequestError.swift in Sources */,
 				2D3010072859262200FB598C /* SearchView.swift in Sources */,
 				2DDDA58C285513EC006E93BF /* AlcoConcurrencyApp.swift in Sources */,
 				D92B9A452858F52800430E24 /* FilterEndpoints.swift in Sources */,
+				2D963D47285D1FAA00E2583E /* CollectionCellView.swift in Sources */,
 				2D30100D285A4CDE00FB598C /* Array+UserDefaultsExtension.swift in Sources */,
 				2D301016285A5C6A00FB598C /* AddCustomCollectionSheet.swift in Sources */,
+				2D963D4F285DFEC800E2583E /* CocktailModel.swift in Sources */,
 				2DDDA5B7285515B8006E93BF /* Endpoint.swift in Sources */,
 				2D301014285A520F00FB598C /* MyPlaceRow.swift in Sources */,
 				2D30100A285A4BCF00FB598C /* UserStorage.swift in Sources */,
+				2D963D56285E05A100E2583E /* CocktailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
