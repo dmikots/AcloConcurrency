@@ -53,10 +53,10 @@ struct CollectionView: View {
                         .frame(height: 1)
                 }
             }
+            .navigationTitle("Collections")
+            .navigationBarTitleDisplayMode(.inline)
         }
         .navigationViewStyle(.stack)
-        .navigationTitle("Collections")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
