@@ -26,8 +26,12 @@ struct CollectionCellView: View {
         .frame(width: 170, height: numberInRow % 2 == 0 ? 190 : 220)
         .background(.white)
         .cornerRadius(8)
+        .overlay(
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(Color.gray, lineWidth: 2)
+        )
         .padding(.horizontal)
-        .shadow(radius: 12)
+        .shadow(radius: 12)        
     }
 }
 

@@ -27,6 +27,10 @@ struct CocktailViewCell: View {
         }
         .frame(width: 170, height: 170)
         .cornerRadius(20)
+        .overlay(
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(Color.gray, lineWidth: 2)
+        )
     }
 }
 
