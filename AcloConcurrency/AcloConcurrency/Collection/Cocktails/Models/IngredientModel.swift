@@ -13,5 +13,8 @@ struct IngredientModel: Identifiable, Codable {
 }
 
 extension IngredientModel {
-    static var mock = IngredientModel(ingredientName: "Kahlua", ingredientImage: "https://www.thecocktaildb.com/images/ingredients/Kahlua-Medium.png")
+    static var mock = IngredientModel(
+        ingredientName: "Kahlua",
+        ingredientImage: "https://www.thecocktaildb.com/images/ingredients/Kahlua-Medium.png"
+    )
 }

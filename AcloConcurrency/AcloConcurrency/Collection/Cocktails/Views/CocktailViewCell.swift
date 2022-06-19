@@ -29,7 +29,7 @@ struct CocktailViewCell: View {
         .cornerRadius(20)
         .overlay(
             RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.gray, lineWidth: 2)
+                .stroke(Color.gray, lineWidth: 1)
         )
     }
 }

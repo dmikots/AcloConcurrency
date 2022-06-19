@@ -28,10 +28,10 @@ struct CollectionCellView: View {
         .cornerRadius(8)
         .overlay(
             RoundedRectangle(cornerRadius: 8)
-                .stroke(Color.gray, lineWidth: 2)
+                .stroke(Color.gray, lineWidth: 1)
         )
         .padding(.horizontal)
-        .shadow(radius: 12)        
+        .shadow(radius: 12)
     }
 }
 
