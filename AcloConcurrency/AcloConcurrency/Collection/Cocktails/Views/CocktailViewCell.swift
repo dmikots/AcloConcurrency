@@ -2,12 +2,16 @@ import SwiftUI
 
 struct CocktailViewCell: View {
 
-    let cocktail: CocktailModel
+   private let cocktail: CocktailModel
+
+    init(cocktail: CocktailModel){
+        self.cocktail = cocktail
+    }
 
     var body: some View {
         ZStack(alignment: .bottomLeading){
             AsyncImage(
-                url: URL(string: cocktail.cocktailImage),
+                url: URL(string: cocktail.image),
                 content: { image in
                     image.resizable()
                         .aspectRatio(contentMode: .fill)
@@ -17,7 +21,7 @@ struct CocktailViewCell: View {
                     ProgressView()
                 }
             )
-            Text(cocktail.cocktailName)
+            Text(cocktail.name)
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading)

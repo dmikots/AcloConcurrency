@@ -2,83 +2,63 @@ import SwiftUI
 
 struct CocktailDescriptionView: View {
 
-    let image: String
-    let name: String
+    private let image: String
+    private let name: String
+
+    init(image: String, name: String){
+        self.image = image
+        self.name = name
+    }
 
     var body: some View {
         VStack(spacing: 24){
             // Image
-            ZStack(alignment: .bottomLeading){
-                AsyncImage(
-                    url: URL(string: image),
-                    content: { image in
-                        image.resizable()
-                            .aspectRatio(contentMode: .fill)
-                    },
-                    placeholder: {
-                        ProgressView()
-                    }
-                )
-                Text(name)
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading)
-                    .background(Color.black
-                        .blur(radius: 8))
-                    .padding(.vertical)
-            }
-            .cornerRadius(16)
-            .overlay(
-                RoundedRectangle(cornerRadius: 16)
-                    .stroke(Color.gray, lineWidth: 1)
-            )
-            .padding(.horizontal, 16)
+            imageView
             ScrollView(.vertical, showsIndicators: false){
-            VStack(spacing: 16){
-                VStack(spacing: 8){
-                    Text("Cocktail")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    VStack{
-                        HStack{
-                            Text("Glass")
-                            Spacer()
-                            Text("Flute")
+                VStack(spacing: 16){
+                    VStack(spacing: 8){
+                        Text("Cocktail")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        VStack{
+                            HStack{
+                                Text("Glass")
+                                Spacer()
+                                Text("Flute")
+                            }
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.gray.opacity(0.7))
+                        .cornerRadius(16)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.gray, lineWidth: 2)
+                        )
                     }
-                    .padding(.vertical)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.gray.opacity(0.7))
-                    .cornerRadius(16)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(Color.gray, lineWidth: 2)
-                    )
-                }
-                .padding(.horizontal)
-                VStack(spacing: 8){
-                    Text("Ingredients")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    VStack{
-                        HStack{
-                            Text("Glass")
-                            Spacer()
-                            Text("Flute")
+                    .padding(.horizontal)
+                    VStack(spacing: 8){
+                        Text("Ingredients")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        VStack{
+                            HStack{
+                                Text("Glass")
+                                Spacer()
+                                Text("Flute")
+                            }
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.gray.opacity(0.7))
+                        .cornerRadius(16)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.gray, lineWidth: 1)
+                        )
                     }
-                    .padding(.vertical)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.gray.opacity(0.7))
-                    .cornerRadius(16)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(Color.gray, lineWidth: 1)
-                    )
+                    .padding(.horizontal)
                 }
-                .padding(.horizontal)
-            }
             }
         }
         .frame(maxWidth: .infinity, alignment: .top)
@@ -86,26 +66,54 @@ struct CocktailDescriptionView: View {
         .navigationTitle(name)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-              ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
 
-                  // add to favorite
+                    // add to favorite
                 }) {
-                  Image(systemName: "star")
+                    Image(systemName: "star")
                         .font(.headline)
                         .foregroundColor(.pink)
                 }
-              }
+            }
             ToolbarItem(placement: .navigationBarTrailing) {
-              Button(action: {
-                // share to friends
-              }) {
-                Image(systemName: "square.and.arrow.up")
-                      .font(.headline)
-                      .foregroundColor(.pink)
-              }
+                Button(action: {
+                    // share to friends
+                }) {
+                    Image(systemName: "square.and.arrow.up")
+                        .font(.headline)
+                        .foregroundColor(.pink)
+                }
             }
         }
+    }
+    var imageView: some View {
+        ZStack(alignment: .bottomLeading){
+            AsyncImage(
+                url: URL(string: image),
+                content: { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fill)
+                },
+                placeholder: {
+                    ProgressView()
+                }
+            )
+            Text(name)
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading)
+                .background(Color.black
+                    .blur(radius: 8))
+                .padding(.vertical)
+        }
+        .cornerRadius(16)
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(Color.gray, lineWidth: 1)
+        )
+        .padding(.horizontal, 16)
     }
 }
 

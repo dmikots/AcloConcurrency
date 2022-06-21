@@ -13,8 +13,14 @@ struct CollectionModel: Identifiable, Codable {
         self.cocktails = cocktails
     }
 }
-// swiftlint:disable all
+
 extension CollectionModel {
-    static var mock = CollectionModel(ingredientName: "Vodka",
-                                      ingredientImage: "https://images.absolutdrinks.com/ingredient-images/Raw/Absolut/65d43459-c926-4b12-a15b-afa7a71c2071.jpg?imwidth=500", cocktails: [CocktailModel.mock])
+    static var mock = CollectionModel(
+        ingredientName: "Vodka",
+        ingredientImage: """
+https://images.absolutdrinks.com/ingredient-images/Raw/Absolut/
+65d43459-c926-4b12-a15b-afa7a71c2071.jpg?imwidth=500
+""",
+        cocktails: [CocktailModel.mock]
+    )
 }

@@ -31,11 +31,11 @@ public class CocktailsViewModel: ObservableObject {
     private func getDrinks(_ drinks: [Drink]) {
         self.drinks = drinks
         _ = drinks.map { drink in
-        cocktails.append(
+            cocktails.append(
                 CocktailModel(
-                    cocktailName: drink.name,
-                    cocktailImage: drink.image,
-                    idDrink: drink.id
+                    id: drink.id,
+                    name: drink.name,
+                    image: drink.image
                 )
             )
         }

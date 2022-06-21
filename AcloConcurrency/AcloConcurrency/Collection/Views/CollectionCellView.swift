@@ -2,9 +2,15 @@ import SwiftUI
 
 struct CollectionCellView: View {
 
-    let numberInRow: Int
-    let imageURL: String?
-    let ingredientName: String
+    private let numberInRow: Int
+    private let imageURL: String?
+    private let ingredientName: String
+
+    init(numberInRow: Int, imageURL: String?, ingredientName: String){
+        self.numberInRow = numberInRow
+        self.imageURL = imageURL
+        self.ingredientName = ingredientName
+    }
 
     var body: some View {
         VStack{
@@ -39,12 +45,12 @@ struct CollectionCellView_Previews: PreviewProvider {
     static var previews: some View {
         CollectionCellView(
             numberInRow: 2,
-                           imageURL: """
+            imageURL: """
                 https://img.restoclub.ru/uploads/place
                            /c/6/7/0/c670f
                            3405f20b2c8513908b467548849_w958_h835--big.jpg
                 """,
-                           ingredientName: "Vodka"
+            ingredientName: "Vodka"
         )
     }
 }
