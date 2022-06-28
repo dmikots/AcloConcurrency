@@ -24,10 +24,11 @@ struct CocktailViewCell: View {
             Text(cocktail.name)
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading)
+                .padding(.leading, 7)
                 .background(Color.black
                     .blur(radius: 8))
-                .padding(.vertical)
+                .padding(.vertical, 12)
+                .padding(.horizontal, 9)
         }
         .frame(width: 170, height: 170)
         .cornerRadius(20)

@@ -17,34 +17,34 @@ struct CocktailsView: View {
     }
 
     var body: some View {
-        ScrollView{
-            HStack{
-                LazyVGrid(columns: [GridItem(), GridItem()], spacing: 18) {
-                    ForEach(cocktailsViewModel.cocktails){ cocktail in
-                        CocktailViewCell(cocktail: cocktail)
-                            .onTapGesture {
-                                navigateToDescription = true
-                                cocktailName = cocktail.name
-                                cocktailImage = cocktail.image
-                            }
-                    }
-                }
-            }
+        ZStack{
             NavigationLink(isActive: $navigateToDescription) {
                 CocktailDescriptionView(image: cocktailImage, name: cocktailName)
             } label: {
                 EmptyView()
-                    .frame(height: 1)
             }
-        }
-        .navigationTitle(ingredientName)
-        .navigationBarTitleDisplayMode(.inline)
-        .onAppear {
-            cocktailsViewModel.getPopularCocktails(ingredientName)
+            ScrollView{
+                HStack{
+                    LazyVGrid(columns: [GridItem(), GridItem()], spacing: 18) {
+                        ForEach(cocktailsViewModel.cocktails){ cocktail in
+                            CocktailViewCell(cocktail: cocktail)
+                                .onTapGesture {
+                                    navigateToDescription = true
+                                    cocktailName = cocktail.name
+                                    cocktailImage = cocktail.image
+                                }
+                        }
+                    }
+                }
+            }
+            .navigationTitle(ingredientName)
+            .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                cocktailsViewModel.getPopularCocktails(ingredientName)
+            }
         }
     }
 }
-
 struct CocktailsView_Previews: PreviewProvider {
     static var previews: some View {
         CocktailsView(ingredientName: "vodka")

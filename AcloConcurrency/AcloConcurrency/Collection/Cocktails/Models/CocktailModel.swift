@@ -10,8 +10,7 @@ struct CocktailModel: Identifiable, Codable {
         id: String,
         name: String,
         image: String
-    )
-    {
+    ){
         self.id = id
         self.name = name
         self.image = image

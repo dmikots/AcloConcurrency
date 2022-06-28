@@ -13,21 +13,20 @@ struct CocktailDescriptionView: View {
     var body: some View {
         VStack(spacing: 24){
             // Image
-            imageView
+            createImage(image: image, name: name)
             ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 16){
                     VStack(spacing: 8){
                         Text("Cocktail")
                             .frame(maxWidth: .infinity, alignment: .leading)
-                        VStack{
+                        VStack(spacing: 8){
                             HStack{
                                 Text("Glass")
                                 Spacer()
                                 Text("Flute")
                             }
-                            .padding(.horizontal)
+                            .padding(.horizontal, 8)
                         }
-                        .padding(.vertical)
                         .frame(maxWidth: .infinity)
                         .background(Color.gray.opacity(0.7))
                         .cornerRadius(16)
@@ -36,7 +35,7 @@ struct CocktailDescriptionView: View {
                                 .stroke(Color.gray, lineWidth: 2)
                         )
                     }
-                    .padding(.horizontal)
+                    .padding(.horizontal, 17)
                     VStack(spacing: 8){
                         Text("Ingredients")
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -46,9 +45,8 @@ struct CocktailDescriptionView: View {
                                 Spacer()
                                 Text("Flute")
                             }
-                            .padding(.horizontal)
+                            .padding(.horizontal, 8)
                         }
-                        .padding(.vertical)
                         .frame(maxWidth: .infinity)
                         .background(Color.gray.opacity(0.7))
                         .cornerRadius(16)
@@ -57,14 +55,12 @@ struct CocktailDescriptionView: View {
                                 .stroke(Color.gray, lineWidth: 1)
                         )
                     }
-                    .padding(.horizontal)
+                    .padding(.horizontal, 17)
                 }
             }
         }
         .frame(maxWidth: .infinity, alignment: .top)
-        .navigationViewStyle(.stack)
         .navigationTitle(name)
-        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
@@ -87,7 +83,9 @@ struct CocktailDescriptionView: View {
             }
         }
     }
-    var imageView: some View {
+}
+
+    @ViewBuilder private func createImage(image: String, name: String) -> some View {
         ZStack(alignment: .bottomLeading){
             AsyncImage(
                 url: URL(string: image),
@@ -115,17 +113,16 @@ struct CocktailDescriptionView: View {
         )
         .padding(.horizontal, 16)
     }
-}
 
-struct CocktailDescriptionView_Previews: PreviewProvider {
-    static var previews: some View {
-        CocktailDescriptionView(
-            image:
+    struct CocktailDescriptionView_Previews: PreviewProvider {
+        static var previews: some View {
+            CocktailDescriptionView(
+                image:
                 """
 https://www.yummytemple.com/wp-content/uploads/2022/04/Strong-B-52-Shot-Cocktail-
 with-coffee-liqueur-cream-liqueur-and-triple-sec-2.jpg
 """,
-            name: "12321"
-        )
+                name: "12321"
+            )
+        }
     }
-}

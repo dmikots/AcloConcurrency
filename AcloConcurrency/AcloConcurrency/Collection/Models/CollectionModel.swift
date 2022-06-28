@@ -1,6 +1,7 @@
 import Foundation
 
 struct CollectionModel: Identifiable, Codable {
+
     let id: UUID
     let ingredientName: String
     let ingredientImage: String

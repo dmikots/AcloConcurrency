@@ -2,8 +2,6 @@ import SwiftUI
 
 struct CollectionView: View {
 
-    private let mockArray = CollectionViewModel.placesMock
-
     @ObservedObject private var collectionModel: CollectionViewModel
     @State private var activeNavigation = false
     @State private var ingredientName: String = ""
@@ -17,28 +15,28 @@ struct CollectionView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 HStack(spacing: 18){
                     LazyVGrid(columns: [GridItem(.flexible())], spacing: 18) {
-                        ForEach(mockArray.indices){ index in
+                        ForEach(collectionModel.mockArray.indices){ index in
                             CollectionCellView(
                                 numberInRow: index,
-                                imageURL: mockArray[index].ingredientImage,
-                                ingredientName: mockArray[index].ingredientName
+                                imageURL: collectionModel.mockArray[index].ingredientImage,
+                                ingredientName: collectionModel.mockArray[index].ingredientName
                             )
                             .onTapGesture {
-                               ingredientName = mockArray[index].ingredientName
+                               ingredientName = collectionModel.mockArray[index].ingredientName
                                 activeNavigation  = true
                             }
                         }
                     }
                     .frame(maxWidth: .infinity, alignment: .top)
                     LazyVGrid(columns: [GridItem(.flexible())], spacing: 18) {
-                        ForEach(mockArray.indices){ index in
+                        ForEach(collectionModel.mockArray.indices){ index in
                             CollectionCellView(
                                 numberInRow: index + 1,
-                                imageURL: mockArray[index].ingredientImage,
-                                ingredientName: mockArray[index].ingredientName
+                                imageURL: collectionModel.mockArray[index].ingredientImage,
+                                ingredientName: collectionModel.mockArray[index].ingredientName
                             )
                             .onTapGesture {
-                                ingredientName = mockArray[index].ingredientName
+                                ingredientName = collectionModel.mockArray[index].ingredientName
                                 activeNavigation  = true
                             }
                         }
