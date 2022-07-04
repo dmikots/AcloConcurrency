@@ -25,8 +25,10 @@ struct CocktailViewCell: View {
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 7)
-                .background(Color.black
-                    .blur(radius: 8))
+                .background(
+                    Color.black
+                    .blur(radius: 8)
+                )
                 .padding(.vertical, 12)
                 .padding(.horizontal, 9)
         }

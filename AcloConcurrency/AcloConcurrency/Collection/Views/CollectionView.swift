@@ -15,28 +15,28 @@ struct CollectionView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 HStack(spacing: 18){
                     LazyVGrid(columns: [GridItem(.flexible())], spacing: 18) {
-                        ForEach(collectionModel.mockArray.indices){ index in
+                        ForEach(collectionModel.places.indices){ index in
                             CollectionCellView(
                                 numberInRow: index,
-                                imageURL: collectionModel.mockArray[index].ingredientImage,
-                                ingredientName: collectionModel.mockArray[index].ingredientName
+                                imageURL: collectionModel.places[index].ingredientImage,
+                                ingredientName: collectionModel.places[index].ingredientName
                             )
                             .onTapGesture {
-                               ingredientName = collectionModel.mockArray[index].ingredientName
+                                ingredientName = collectionModel.places[index].ingredientName
                                 activeNavigation  = true
                             }
                         }
                     }
                     .frame(maxWidth: .infinity, alignment: .top)
                     LazyVGrid(columns: [GridItem(.flexible())], spacing: 18) {
-                        ForEach(collectionModel.mockArray.indices){ index in
+                        ForEach(collectionModel.places.indices){ index in
                             CollectionCellView(
                                 numberInRow: index + 1,
-                                imageURL: collectionModel.mockArray[index].ingredientImage,
-                                ingredientName: collectionModel.mockArray[index].ingredientName
+                                imageURL: collectionModel.places[index].ingredientImage,
+                                ingredientName: collectionModel.places[index].ingredientName
                             )
                             .onTapGesture {
-                                ingredientName = collectionModel.mockArray[index].ingredientName
+                                ingredientName = collectionModel.places[index].ingredientName
                                 activeNavigation  = true
                             }
                         }
@@ -44,12 +44,10 @@ struct CollectionView: View {
                     .frame(maxWidth: .infinity, alignment: .top)
                 }
                 .padding(.horizontal, 16)
-                NavigationLink(isActive: $activeNavigation) {
-                    CocktailsView(ingredientName: ingredientName)
-                } label: {
-                    EmptyView()
-                        .frame(height: 1)
-                }
+                .navigate(
+                    to: CocktailsView(ingredientName: ingredientName),
+                          when: $activeNavigation
+                )
             }
             .navigationTitle("Collections")
             .navigationBarTitleDisplayMode(.inline)

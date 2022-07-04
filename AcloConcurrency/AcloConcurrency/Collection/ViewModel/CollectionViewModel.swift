@@ -2,8 +2,7 @@ import Combine
 
 public class CollectionViewModel: ObservableObject {
 
-    @Published private(set) var mockArray = placesMock
-    @Published private(set) var places: [CollectionModel] = []
+    @Published private(set) var places: [CollectionModel] = placesMock
 }
 
 extension CollectionViewModel {

@@ -18,11 +18,6 @@ struct CocktailsView: View {
 
     var body: some View {
         ZStack{
-            NavigationLink(isActive: $navigateToDescription) {
-                CocktailDescriptionView(image: cocktailImage, name: cocktailName)
-            } label: {
-                EmptyView()
-            }
             ScrollView{
                 HStack{
                     LazyVGrid(columns: [GridItem(), GridItem()], spacing: 18) {
@@ -43,6 +38,10 @@ struct CocktailsView: View {
                 cocktailsViewModel.getPopularCocktails(ingredientName)
             }
         }
+        .navigate(
+            to: CocktailDescriptionView(image: cocktailImage, name: cocktailName),
+            when: $navigateToDescription
+        )
     }
 }
 struct CocktailsView_Previews: PreviewProvider {

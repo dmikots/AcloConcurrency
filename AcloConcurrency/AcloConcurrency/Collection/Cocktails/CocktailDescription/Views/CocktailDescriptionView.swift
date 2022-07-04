@@ -14,7 +14,7 @@ struct CocktailDescriptionView: View {
         VStack(spacing: 24){
             // Image
             createImage(image: image, name: name)
-            ScrollView(.vertical, showsIndicators: false){
+            ScrollView{
                 VStack(spacing: 16){
                     VStack(spacing: 8){
                         Text("Cocktail")
@@ -85,44 +85,46 @@ struct CocktailDescriptionView: View {
     }
 }
 
-    @ViewBuilder private func createImage(image: String, name: String) -> some View {
-        ZStack(alignment: .bottomLeading){
-            AsyncImage(
-                url: URL(string: image),
-                content: { image in
-                    image.resizable()
-                        .aspectRatio(contentMode: .fill)
-                },
-                placeholder: {
-                    ProgressView()
-                }
-            )
-            Text(name)
-                .font(.largeTitle)
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.leading)
-                .background(Color.black
-                    .blur(radius: 8))
-                .padding(.vertical)
-        }
-        .cornerRadius(16)
-        .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.gray, lineWidth: 1)
+@ViewBuilder private func createImage(image: String, name: String) -> some View {
+    ZStack(alignment: .bottomLeading){
+        AsyncImage(
+            url: URL(string: image),
+            content: { image in
+                image.resizable()
+                    .aspectRatio(contentMode: .fill)
+            },
+            placeholder: {
+                ProgressView()
+            }
         )
-        .padding(.horizontal, 16)
+        Text(name)
+            .font(.largeTitle)
+            .foregroundColor(.white)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.leading)
+            .background(
+                Color.black
+                .blur(radius: 8)
+            )
+            .padding(.vertical)
     }
+    .cornerRadius(16)
+    .overlay(
+        RoundedRectangle(cornerRadius: 16)
+            .stroke(Color.gray, lineWidth: 1)
+    )
+    .padding(.horizontal, 16)
+}
 
-    struct CocktailDescriptionView_Previews: PreviewProvider {
-        static var previews: some View {
-            CocktailDescriptionView(
-                image:
+struct CocktailDescriptionView_Previews: PreviewProvider {
+    static var previews: some View {
+        CocktailDescriptionView(
+            image:
                 """
 https://www.yummytemple.com/wp-content/uploads/2022/04/Strong-B-52-Shot-Cocktail-
 with-coffee-liqueur-cream-liqueur-and-triple-sec-2.jpg
 """,
-                name: "12321"
-            )
-        }
+            name: "12321"
+        )
     }
+}
