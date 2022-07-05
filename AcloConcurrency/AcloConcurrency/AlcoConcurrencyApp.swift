@@ -4,10 +4,12 @@ import SwiftUI
 struct AlcoConcurrencyApp: App {
 
     @StateObject private var placesViewModel: PlacesViewModel
+    @StateObject private var collectionViewModel: CollectionViewModel
 
     init() {
         let userStorage = UserStorage()
         _placesViewModel = StateObject(wrappedValue: PlacesViewModel(userStorage: userStorage))
+        _collectionViewModel = StateObject(wrappedValue: CollectionViewModel())
     }
 
     var body: some Scene {
@@ -17,9 +19,9 @@ struct AlcoConcurrencyApp: App {
                     .tabItem {
                         Label("My Places", systemImage: "heart.fill")
                     }
-                SharingView()
+                CollectionView(collectionModel: collectionViewModel)
                     .tabItem {
-                        Label("Sharing", systemImage: "message.and.waveform.fill")
+                        Label("Collection", systemImage: "message.and.waveform.fill")
                     }
                 SearchView()
                     .tabItem {

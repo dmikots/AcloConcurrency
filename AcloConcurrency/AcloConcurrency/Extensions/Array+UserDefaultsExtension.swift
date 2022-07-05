@@ -20,5 +20,4 @@ extension Array: RawRepresentable where Element: Codable {
         }
         return result
     }
-
 }

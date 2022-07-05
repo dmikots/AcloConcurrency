@@ -1,7 +1,7 @@
 import Foundation
 
 enum FilterEndpoints {
-    case ingredient(Ingredient)
+    case ingredient(name: String)
 }
 
 extension FilterEndpoints: Endpoint {
