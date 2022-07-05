@@ -83,37 +83,36 @@ struct CocktailDescriptionView: View {
             }
         }
     }
-}
-
-@ViewBuilder private func createImage(image: String, name: String) -> some View {
-    ZStack(alignment: .bottomLeading){
-        AsyncImage(
-            url: URL(string: image),
-            content: { image in
-                image.resizable()
-                    .aspectRatio(contentMode: .fill)
-            },
-            placeholder: {
-                ProgressView()
-            }
-        )
-        Text(name)
-            .font(.largeTitle)
-            .foregroundColor(.white)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.leading)
-            .background(
-                Color.black
-                .blur(radius: 8)
+    @ViewBuilder private func createImage(image: String, name: String) -> some View {
+        ZStack(alignment: .bottomLeading){
+            AsyncImage(
+                url: URL(string: image),
+                content: { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fill)
+                },
+                placeholder: {
+                    ProgressView()
+                }
             )
-            .padding(.vertical)
+            Text(name)
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading)
+                .background(
+                    Color.black
+                    .blur(radius: 8)
+                )
+                .padding(.vertical)
+        }
+        .cornerRadius(16)
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(Color.gray, lineWidth: 1)
+        )
+        .padding(.horizontal, 16)
     }
-    .cornerRadius(16)
-    .overlay(
-        RoundedRectangle(cornerRadius: 16)
-            .stroke(Color.gray, lineWidth: 1)
-    )
-    .padding(.horizontal, 16)
 }
 
 struct CocktailDescriptionView_Previews: PreviewProvider {
